@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(158, 158, 235, 0.592),rgba(1, 14, 71, 0.7)),url(2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {  /* Corrected class name */
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {  /* Corrected class name */
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li {
+    color: rgb(227, 209, 209);
+    text-decoration: none;
+    font-size: 13px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height:2px;
+    background: #f44336;
+    display:block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+  }
+  
+  .text-box {  /* Corrected class name (no space after the dot) */
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Corrected: Semicolon placed correctly */
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+
+}
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none; /* Hide icons by default */
+}
+
+
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    } /* right Properly closed */
+nav .fa{
+    display:block;
+    color:#fff;
+    margin:10px;
+    font-size:22px;
+    cursor: pointer;
+}
+.nav-links ul{
+    padding: 30px;
+}
+
+}
+
+/* Hide menu and close icons by default */
+.fas.fa-bars, 
+.fas.fa-times {
+    display: none;
+}
+
+/* Show icons only on mobile screens */
+@media (max-width: 768px) { 
+    .fas.fa-bars, 
+    .fas.fa-times {
+        display: block;
+    }
+}
+
+
+.course{
+    width: 80%;
+    margin:auto;
+    text-align:center;
+    padding-top: 100px;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+
+}
+.course {
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* Row Flexbox for layout */
+/* General Layout for the course section */
+.course {
+    text-align: center;
+    margin: 50px auto;
+}
+
+/* Row Flexbox for layout */
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling each course column */
+.course-col {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction:column;
+    }
+}
+
+/*----------Experience------*/
+
+.experience-container {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    justify-content: space-between;
+}
+
+.experience-col {
+    flex: 1;
+    text-align: left;
+}
+
+.experience-box {
+    background-color: #f4f4f4; /* Light gray background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.experience-col img {
+        width: 50%;
+        transition: filter 0.5s ease-in-out; /* Smooth transition effect */
+    }
+
+    .experience-col img:hover {
+        filter: grayscale(100%) sepia(100%) hue-rotate(180deg); /* Changes the color on hover */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+    }
+    .content {
+        width: 50%;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .step {
+        margin-bottom: 20px;
+        padding: 15px;
+        background: #e0f7fa;
+        border-left: 5px solid #00796b;
+        border-radius: 5px;
+    }
+    .step h3 {
+        margin-bottom: 10px;
+        color: #00796b;
+    }
+    .step p {
+        color: #333;
+        line-height: 1.5;
+    }
+
+/*--------facilities------*/
+
+.facilities{
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis:31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top:16px;
+    margin-bottom:15px;
+    text-align: left;
+}
+/*------testimonial-----*/
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius:10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonial-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonial-col p{
+    padding: 0;
+}
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.testimonial-col .fa{
+    color: #f44336;
+
+}
+@media(max-width: 700px){
+    .testimonial-col img{
+        margin-left:0px;
+        margin-right: 15px;
+    }
+}
+
+/*------CALL TO ACTION----*/
+
+.cta{
+    margin: 100px auto;
+    width:80%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://www.shutterstock.com/image-photo/group-colleagues-engaging-discussion-during-600nw-2461746317.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+    
+}
+.cta h1{
+    color:#fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 24px;
+    }
+}
+
+/*----footer===*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fab {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.far.fa-heart {
+    color: #f44336;
+}
+
+
+/*-----about us page-----*/
+
+.Sub-header{
+    height: 50vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://blog.ipleaders.in/wp-content/uploads/2018/05/hands-1063442_960_720.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.Sub-header h1{
+    margin-top: 100px;
+}
+.about-us{
+    width:80%;
+    margin:auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2 px;
+
+}
+.about-col img{
+    width:100%;
+}
+
+.about-col h1{
+    padding-top: 0;
+}
+
+.about-col p{
+    padding: 15px 0 25px;
+}
+.red-btn{
+    border: 1px solid #f44336;
+    background: transparent;
+    color: #f44336;
+}
+
+.red-btn:hover{
+    color:#fff;
+}
+/*----content career----*/
+.career-content{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+
+}
+.career-left{
+    flex-basis: 65%;
+}
+.career-left img{
+    width:100%;
+}
+.career-left h2{
+    color:#222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Heading Styles */
+h2 {
+    color: #333;
+}
+
+/* Process Steps Container */
+.process-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual Step Styles */
+.step {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    text-align: left;
+    border-radius: 8px;
+}
+
+/* Step Heading Styles */
+.step h3 {
+    margin: 0;
+    color: #444;
+}
+
+/* Step Paragraph Styles */
+.step p {
+    color: #666;
+}
+
+/* Apply Button Styles */
+.apply-button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Apply Button Hover Effect */
+.apply-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Section Styles */
+.why-join-us {
+    background-color: rgb(17, 0, 60); /* Deep blue background */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px 0; /* Vertical margin; no horizontal margin */
+    width: 50%; /* Full width of the parent container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+/* Heading Styles */
+.why-join-us h2 {
+    color: #fff;
+    text-align: center;
+}
+
+/* Paragraph Styles */
+.why-join-us p {
+    color: #ddd;
+    line-height: 1.6;
+    text-align: justify;
+}
+.comment-box{
+    border: 1px solid #ccc;
+    margin: 50px0;
+    padding: 10px 20px;
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-from input,.comment-from textarea{
+    width:100%;
+    padding: 10px;
+    margin:15px 0;
+    box-sizing: border-box;
+    border:none;
+    outline: none;
+    background: #f0f0f0;
+}
+.comment-from button{
+    margin: 10px 0;
+}
+@media(max-width:700px){
+    .sub-header h1{
+        font-size: 24px;
+    }
+}
+
+/*-----contact us page---*/
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Ensures items are spread across the row */
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 40px; /* Adds spacing between the two sections */
+    max-width: 900px; /* Adjust the width for better layout */
+    margin: auto; /* Centers the whole section */
+}
+
+.contact-col {
+    flex: 1; /* Makes both sections take equal space */
+    display: flex;
+    flex-direction: column; /* Keeps the contact details stacked */
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item i {
+    font-size: 28px;
+    color: #f44336;
+    margin-right: 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 500;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Form Styling */
+.contact-form {
+    flex: 1; /* Takes equal space as the contact details */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between input fields */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #d32f2f;
+}
