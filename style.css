@@ -118,19 +118,22 @@ nav .fa {
         text-align: left;
         z-index: 2;
         transition: 1s;
-    } /* right Properly closed */
-nav .fa{
-    display:block;
-    color:#fff;
-    margin:10px;
-    font-size:22px;
-    cursor: pointer;
-}
-.nav-links ul{
-    padding: 30px;
+    } /* right properly closed */
+
+    .nav-links ul {
+        padding: 30px;
+    }
 }
 
+nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
 }
+
+
 
 /* Hide menu and close icons by default */
 .fas.fa-bars, 
