@@ -36,6 +36,16 @@ nav img {
     position: relative;
 }
 
+ul li a {
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Optional: removes underline */
+}
+
+ul li a:hover {
+    color: #ccc; /* Optional: change color on hover (light grey in this case) */
+}
+
+
 .nav-links ul li {
     color: rgb(227, 209, 209);
     text-decoration: none;
@@ -101,36 +111,38 @@ nav .fa {
 }
 
 
-@media (max-width: 700px) {
-    .text-box h1 {
-        font-size: 20px;
+@media only screen and (max-width: 768px) {
+    /* Display the menu icon on mobile */
+    .fas.fa-bars {
+        display: block; /* Show menu icon on smaller screens */
     }
-    .nav-links ul li {
+
+    /* Hide the nav links initially */
+    ul {
+        display: none; /* Hide the menu links on mobile */
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Show the menu links when the menu icon is clicked */
+    ul.show {
+        display: block; /* Show the menu links */
+    }
+
+    /* Make the list items stack vertically on mobile */
+    ul li {
         display: block;
+        margin: 10px 0;
     }
-    .nav-links {
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    } /* right properly closed */
 
-    .nav-links ul {
-        padding: 30px;
+    /* Style for the mobile menu links */
+    ul li a {
+        font-size: 20px;
+        padding: 10px;
+        display: block; /* Make each link take up a full line */
+        text-align: center;
     }
-}
-
-nav .fa {
-    display: block;
-    color: #fff;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
 }
 
 
@@ -156,6 +168,16 @@ nav .fa {
     text-align:center;
     padding-top: 100px;
 }
+.course {
+    background-color: black;
+    color: #f44336; /* Ensures text remains visible */
+    width: 100%;
+    min-height: 100vh; /* Covers full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
 h1{
     font-size: 36px;
     font-weight: 600;
