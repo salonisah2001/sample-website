@@ -4,7 +4,7 @@
     font-family: "Poppins", serif;
 }
 
-.header{
+.header {
     min-height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(158, 158, 235, 0.592),rgba(1, 14, 71, 0.7)),url(2.jpg);
@@ -24,12 +24,12 @@ nav img {
     width: 150px;
 }
 
-.nav-links {  /* Corrected class name */
+.nav-links {
     flex: 1;
     text-align: right;
 }
 
-.nav-links ul li {  /* Corrected class name */
+.nav-links ul li {
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
@@ -37,58 +37,49 @@ nav img {
 }
 
 ul li a {
-    color: white; /* Set the text color to white */
-    text-decoration: none; /* Optional: removes underline */
+    color: white;
+    text-decoration: none;
 }
 
 ul li a:hover {
-    color: #ccc; /* Optional: change color on hover (light grey in this case) */
+    color: #ccc;
 }
 
-
-.nav-links ul li {
-    color: rgb(227, 209, 209);
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li::after{
+.nav-links ul li::after {
     content: '';
     width: 0%;
-    height:2px;
+    height: 2px;
     background: #f44336;
-    display:block;
+    display: block;
     margin: auto;
     transition: 0.5s;
-
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li:hover::after {
     width: 100%;
 }
 
-a {
-    text-decoration: none;
-  }
-  
-  .text-box {  /* Corrected class name (no space after the dot) */
+.text-box {
     width: 90%;
     color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Corrected: Semicolon placed correctly */
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 .text-box h1 {
     font-size: 62px;
 }
-.text-box p{
+
+.text-box p {
     margin: 10px 0 40px;
     font-size: 14px;
     color: #fff;
 }
 
-.hero-btn{
+.hero-btn {
     display: inline-block;
     text-decoration: none;
     color: #fff;
@@ -96,71 +87,66 @@ a {
     padding: 12px 34px;
     font-size: 13px;
     background: transparent;
-    position: relative;
     cursor: pointer;
-
 }
-.hero-btn:hover{
+
+.hero-btn:hover {
     border: 1px solid #f44336;
     background: #f44336;
     transition: 1s;
 }
 
-nav .fa {
-    display: none; /* Hide icons by default */
-}
-
-
-@media only screen and (max-width: 768px) {
-    /* Display the menu icon on mobile */
-    .fas.fa-bars {
-        display: block; /* Show menu icon on smaller screens */
-    }
-
-    /* Hide the nav links initially */
-    ul {
-        display: none; /* Hide the menu links on mobile */
-        text-align: center;
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    /* Show the menu links when the menu icon is clicked */
-    ul.show {
-        display: block; /* Show the menu links */
-    }
-
-    /* Make the list items stack vertically on mobile */
-    ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    /* Style for the mobile menu links */
-    ul li a {
-        font-size: 20px;
-        padding: 10px;
-        display: block; /* Make each link take up a full line */
-        text-align: center;
-    }
-}
-
-
-
-/* Hide menu and close icons by default */
-.fas.fa-bars, 
-.fas.fa-times {
+/* Hide menu & close icons on PC screens */
+.menu-icon, .close-icon {
     display: none;
 }
 
-/* Show icons only on mobile screens */
-@media (max-width: 768px) { 
-    .fas.fa-bars, 
-    .fas.fa-times {
+/* Mobile Responsive Design */
+@media (max-width: 700px) {
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px; /* Initially hidden */
+        text-align: left;
+        z-index: 2;
+        transition: right 0.5s ease-in-out;
+        padding: 20px;
+    }
+
+    .nav-links ul {
+        padding-top: 50px;
+    }
+
+    .nav-links ul li {
         display: block;
+        padding: 20px;
+    }
+
+    /* Show icons only on mobile */
+    .menu-icon, .close-icon {
+        display: block;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+
+    }
+
+    /* Positioning of menu and close icons */
+    .menu-icon {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 }
-
 
 .course{
     width: 80%;
@@ -175,8 +161,8 @@ nav .fa {
     min-height: 100vh; /* Covers full viewport height */
     padding: 20px;
     box-sizing: border-box;
+    
 }
-
 
 h1{
     font-size: 36px;
@@ -695,3 +681,6 @@ body {
 .contact-form button:hover {
     background-color: #d32f2f;
 }
+
+
+

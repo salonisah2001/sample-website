@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dream Space Info Pvt. Ltd.</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-     
-    </head>
-    <body>        
-    <section class="header">
-        <nav>
-            <img src="https://content.jdmagicbox.com/v2/comp/ahmedabad/a4/079pxx79.xx79.131221151706.m8a4/catalogue/dream-space-thaltej-ahmedabad-estate-agents-3md78u9l93.jpg" style="width: 60px; height: 60px; border-radius: 50%;">
-            <div class="nav-links" id="navlinks">
-                <i class="fas fa-times" onclick="hidemenu()"></i>  <!-- Close Icon -->
-
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/about.html">ABOUT</a></li>
-                    <li><a href="/service.html">OUR SERVICE</a></li>
-                    <li><a href="/career.html">CAREER</a></li>
-                    <li><a href="/contact.html">CONTACT US</a></li>    
-                </ul>
-            </div>
-            <i class="fas fa-bars" onclick="showMenu()"></i>  <!-- Menu Icon -->
-        </nav>
-        <div class="text-box">
-            <h1>Dream Space Business Solution</h1>
-            <p>We understand that each point of contact between a company and <br>its customers can directly affect the success of the business.</p>
-            <a href="" class="hero-btn">Visit Us To Know More</a>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Space Info Pvt. Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>        
+<section class="header">
+    <nav>
+        <img src="https://content.jdmagicbox.com/v2/comp/ahmedabad/a4/079pxx79.xx79.131221151706.m8a4/catalogue/dream-space-thaltej-ahmedabad-estate-agents-3md78u9l93.jpg" style="width: 60px; height: 60px; border-radius: 50%;">
+        
+        <div class="nav-links" id="navlinks">
+            <i class="fas fa-times close-icon" onclick="hideMenu()"></i>  <!-- Close Icon (Hidden on PC) -->
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about.html">ABOUT</a></li>
+                <li><a href="/service.html">OUR SERVICE</a></li>
+                <li><a href="/career.html">CAREER</a></li>
+                <li><a href="/contact.html">CONTACT US</a></li>    
+            </ul>
         </div>
         
+        <i class="fas fa-bars menu-icon" onclick="showMenu()"></i>  <!-- Menu Icon (Hidden on PC) -->
+    </nav>
+    
+    <div class="text-box">
+        <h1>Dream Space Business Solution</h1>
+        <p>We understand that each point of contact between a company and <br>its customers can directly affect the success of the business.</p>
+        <a href="" class="hero-btn">Visit Us To Know More</a>
+    </div>
+</section>
 
-    </section>
+<script>
+    var navLinks = document.getElementById("navlinks");
+
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
+
+
 <!------course-------->
 <section class="course">
     <h2>Our Courses</h2>
@@ -215,18 +228,18 @@
 
 <!--------javascript for toggle menu------->
 <script>
-    var navLinks = document.getElementById("navLinks");
-
     function showMenu() {
-        navLinks.style.right = "0";  // Show menu
+        document.getElementById("navlinks").style.right = "0";
     }
 
     function hideMenu() {
-        navLinks.style.right = "-200px"; // Hide menu
+        document.getElementById("navlinks").style.right = "-200px";
     }
 </script>
 
+
 </script>
+
 
     
 </body>
